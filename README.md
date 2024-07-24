@@ -7,7 +7,7 @@ zomato.css: The CSS file containing styles for the entire project.
 investor.html: The linked page to INVESTOR RELATIONS for creating relations with investors.
 addrestaurant.html: The linked page to ADD RESTAURANT for adding new restaurants to zomato.
 loginform.html: The linked page to LOGIN for the customers to login their account.
-zomatosignup.html: The linked page to SIGNUPA for the customers to create their account.
+zomatosignup.html: The linked page to SIGNUP for the customers to create their account.
 
 Features
 Homepage: A landing page with a search bar, featured restaurants, and popular categories.
