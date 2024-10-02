@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato login</title>
+    <style>
+        #container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+            margin-top: 100px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #ff5757;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .or {
+            text-align: center;
+            margin: 15px 0;
+            color: #888;
+            
+        }
+
+        .login-link {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #ff5a5f;
+            text-decoration: none;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="innerBox">
+            <h2>Login</h2>
+            <form action="">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email">
+                <label for="Password">Password:</label>
+                <input type="password" name="Password">
+                <button type="submit">Login</button>
+                <div class="or">or</div>
+            </form>
+            <p class="login-link">Create a new account? <a href="zomatosignup.html">Sign in</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        width: 350px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin: 0;
+        color: #333;
+    }
+
+    .close {
+        font-size: 24px;
+        cursor: pointer;
+        color: #888;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .checkbox-container input {
+        margin-right: 10px;
+    }
+
+    .checkbox-container label {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .checkbox-container a {
+        color: #ff5a5f;
+        text-decoration: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .create-account {
+        background-color: #e0e0e0;
+        color: #888;
+    }
+
+    .or {
+        text-align: center;
+        margin: 15px 0;
+        color: #888;
+    }
+
+    .google-signin {
+        background-color: white;
+        border: 1px solid #ddd;
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .google-signin img {
+        width: 18px;
+        margin-right: 10px;
+    }
+
+    .login-link {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        margin-top: 20px;
+    }
+
+    .login-link a {
+        color: #ff5a5f;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="modal">
+        <div class="modal-header">
+            <h2>Sign up</h2>
+            <span class="close">&times;</span>
+        </div>
+        <form name="">
+            <input type="text" placeholder="Full Name"  required>
+    
+            <input type="email" id="dataInput2" placeholder="Email" required>
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to Zomato's <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>
+                    and <a href="#">Content Policies</a></label>
+            </div>
+            
+            <button type="submit" class="create-account" onclick="saveData()">Create account</button>
+            <div class="or">or</div>
+            <button type="button" class="google-signin">
+                <img src="https://www.google.com/favicon.ico" alt="Google icon"> Sign in with Google
+            </button>
+        </form>
+        <p class="login-link">Already have an account? <a href="loginform.html">Log in</a></p>
+    </div>
+
+    <script>
+        function saveData() {
+      var data = document.getElementById("dataInput2").value;
+      if (data !== "") {
+        localStorage.setItem(data, data);
+        window.open("loginform.html","_parent");
+        // document.getElementById("message").innerText = "Data saved successfully!";
+      } else {
+        document.getElementById("message").textContent = "Please enter some data!";
+      }
+    }
+
+    </script>
+</body>
+
+</html>
